@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Roboto&display=swap");
 
 :root {
   --red: #c5004a;
@@ -12,7 +12,8 @@
   /* --darkblue: #010114; */
   --darkblue: #00010a;
   --yellow: #feff88;
-  --neon: #f03f5e;
+  --neon-red: #f03f5e;
+  --neon-orange: #f8803b;
 }
 * {
   box-sizing: border-box;
@@ -21,7 +22,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--lightgray);
   background-color: var(--darkblue);
 }
@@ -129,7 +130,7 @@ pre {
   float: left;
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .home :link:not(:hover) {
   text-decoration: none;
@@ -162,17 +163,11 @@ pre {
 .postlist-item {
   counter-increment: start-from -1;
 }
-.postlist-item:before {
-  display: inline-block;
-  pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
-  line-height: 100%;
-  text-align: right;
-}
+
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: lightsteelblue;
+  color: var(--neon-orange);
 }
 .postlist-date {
   word-spacing: -0.5px;
@@ -197,7 +192,7 @@ pre {
   font-size: 0.625em; /* 10px /16 */
   padding: 2px 4px;
   margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--neon);
+  background-color: var(--neon-red);
   color: var(--darkblue);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
@@ -240,5 +235,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather", serif;
+  font-family: "Cormorant Garamond", serif;
+}
+h1 {
+  font-size: 3em;
 }
